@@ -3,4 +3,24 @@
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	text-align: center;
+	* {
+		padding: 0;
+		margin: 0;
+	}
+	&__header {
+		padding-bottom: vw(50);
+	}
+	&__title {
+		font-style: normal;
+		font-weight: 500;
+		font-size: vw(28);
+	}
+	&__description {
+		font-style: normal;
+		font-weight: 300;
+		font-size: vw(18);
+		letter-spacing: 0.128571px;
+		opacity: 0.5;
+	}
 }
