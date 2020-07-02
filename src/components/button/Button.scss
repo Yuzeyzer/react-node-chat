@@ -1,0 +1,15 @@
+.button {
+	&--large {
+		text-transform: uppercase;
+		padding: vw(17) vw(106) vw(20);
+		font-size: vw(14);
+		font-weight: 500;
+    border-radius: 2px;
+		height: vw(56);
+		@media screen and (max-width:1024px) {
+			height: vmin(32);
+			padding: vmin(5) vmin(45);
+			font-size: vmin(10);
+		}
+	}
+}
