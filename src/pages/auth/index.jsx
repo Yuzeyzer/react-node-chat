@@ -1,9 +1,11 @@
 import React from 'react';
-import { Form, Input, Checkbox } from 'antd';
-import Icon from '@ant-design/icons';
+import { Form, Input } from 'antd';
+import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from '../../components';
 
 import './auth.scss';
+
+import bg from '../../images/auth-bg.png';
 
 class Auth extends React.Component {
   formRef = React.createRef();
@@ -21,33 +23,49 @@ class Auth extends React.Component {
     return (
       <section className='auth'>
         <div className='auth__content'>
-          <div className='auth__header'>
-            <h1 className='auth__title'>Войти в аккаунт</h1>
-            <p className='auth__description'>Пожалуйста, войдите в свой аккаунт</p>
+          <div className='auth__column'>
+            <img className="auth__img" src={bg} alt='' />
           </div>
-          <AuthForm>
-            <Form ref={this.formRef} onSubmit={this.handleSubmit} className='login-form'>
-              <Form.Item name='username' rules={[{ required: true }]}>
-                <Input
-                  prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  placeholder='Username'
-                />
-              </Form.Item>
-              <Form.Item name='username' rules={[{ required: true }]}>
-                <Input
-                  prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
-                  type='password'
-                  placeholder='Password'
-                />
-              </Form.Item>
-              <Form.Item>
-                <Button className='button--large' type='primary'>
-                  Войти в Аккаунт
-                </Button>
-                <a href=''>Зарегистрироваться</a>
-              </Form.Item>
-            </Form>
-          </AuthForm>
+          <div className='auth__column'>
+            <div className='auth__header'>
+              <h1 className='auth__title title'>ВХОД</h1>
+            </div>
+            <AuthForm>
+              <Form
+                ref={this.formRef}
+                onSubmit={this.handleSubmit}
+                initialValues={{
+                  remember: true,
+                }}
+                className='login-form'>
+                <Form.Item
+                  name='username'
+                  rules={[{ required: true, message: 'Please input your Username!' }]}>
+                  <Input
+                    className='button--input'
+                    prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
+                    placeholder='Username'
+                  />
+                </Form.Item>
+                <Form.Item
+                  name='password'
+                  rules={[{ required: true, message: 'Please input your Password!' }]}>
+                  <Input
+                    className='button--input'
+                    prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
+                    type='password'
+                    placeholder='Password'
+                  />
+                </Form.Item>
+                <Form.Item>
+                  <Button type='primary' htmlType='submit' className='button--large'>
+                    Войти в Аккаунт
+                  </Button>
+                  <a href=''>Зарегистрироваться</a>
+                </Form.Item>
+              </Form>
+            </AuthForm>
+          </div>
         </div>
       </section>
     );

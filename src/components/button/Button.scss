@@ -1,16 +1,67 @@
 .button {
 	&--large {
+		width: 100%;
+		margin-top: vw(20);
+		margin-bottom: vw(30);
 		text-transform: uppercase;
-		padding: vw(17) vw(106) vw(20);
+		padding: vw(17) 0 vw(20);
 		font-size: vw(14);
 		font-weight: 500;
-    border-radius: 2px;
+		border-radius: vw(100);
 		height: vw(56);
 		letter-spacing: 0.1px;
-		@media screen and (max-width:1024px) {
+		@media screen and (max-width: 1024px) {
 			height: vmin(32);
 			padding: vmin(5) vmin(45);
 			font-size: vmin(10);
 		}
 	}
+	&--input {
+		margin-bottom: vw(35);
+		padding: vw(17) 0;
+		background: #ffffff;
+		border: none;
+		border-bottom: vw(1) solid #dddddd;
+		box-sizing: border-box;
+		border-radius: 0;
+		font-family: Roboto;
+		font-style: normal;
+		font-weight: normal;
+		letter-spacing: 0.114286px;
+		height: vw(50);
+		border-right-width: 0 !important;
+
+		input {
+			font-size: vw(16);
+			line-height: vw(19);
+		}
+
+		.ant-input-prefix {
+			margin-right: vw(10);
+
+			svg {
+				width: vw(14);
+				height: vw(14);
+			}
+		}
+	}
+}
+
+.ant-input-affix-wrapper-focused {
+	border-color: #40a9ff;
+	border-right-width: 0 !important;
+	outline: 0;
+	box-shadow: 0 0 0 0;
+}
+
+.ant-form-item-explain {
+	text-align: left;
+	margin-top: vw(-30);
+}
+
+.ant-form-item-has-error .ant-input:focus,
+.ant-form-item-has-error .ant-input-affix-wrapper:focus,
+.ant-form-item-has-error .ant-input-focused,
+.ant-form-item-has-error .ant-input-affix-wrapper-focused {
+	box-shadow: 0 0 0 0;
 }

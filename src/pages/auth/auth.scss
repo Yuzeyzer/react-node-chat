@@ -1,21 +1,45 @@
 .auth {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	padding: vw(40) vw(90);
 	height: 100%;
-	text-align: center;
+	box-sizing: border-box;
 	* {
 		padding: 0;
 		margin: 0;
 	}
+
+	&__content {
+		padding-top: vw(100);
+		padding-right: vw(0);
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__column {
+		width: 50%;
+	}
+	&__img {
+		width: vw(744);
+	}
 	&__header {
-		margin-bottom: vw(50);
+		max-width: vw(350);
+		margin: 0 auto vw(50);
 	}
 	&__title {
 		font-style: normal;
 		font-weight: 500;
-		font-size: vw(28);
+		font-size: vw(25);
 		line-height: vw(33);
+	}
+	.title {
+		position: relative;
+		&::before {
+			position: absolute;
+			bottom: vw(-10);
+			content: "";
+			width: vw(29);
+			height: vw(6);
+			background-color: #40a9ff;
+		}
 	}
 	&__description {
 		font-style: normal;
