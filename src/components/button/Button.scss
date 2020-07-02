@@ -24,7 +24,6 @@
 		border-bottom: vw(1) solid #dddddd;
 		box-sizing: border-box;
 		border-radius: 0;
-		font-family: Roboto;
 		font-style: normal;
 		font-weight: normal;
 		letter-spacing: 0.114286px;
@@ -45,23 +44,4 @@
 			}
 		}
 	}
-}
-
-.ant-input-affix-wrapper-focused {
-	border-color: #40a9ff;
-	border-right-width: 0 !important;
-	outline: 0;
-	box-shadow: 0 0 0 0;
-}
-
-.ant-form-item-explain {
-	text-align: left;
-	margin-top: vw(-30);
-}
-
-.ant-form-item-has-error .ant-input:focus,
-.ant-form-item-has-error .ant-input-affix-wrapper:focus,
-.ant-form-item-has-error .ant-input-focused,
-.ant-form-item-has-error .ant-input-affix-wrapper-focused {
-	box-shadow: 0 0 0 0;
 }
