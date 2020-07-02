@@ -9,18 +9,20 @@
 		margin: 0;
 	}
 	&__header {
-		padding-bottom: vw(50);
+		margin-bottom: vw(50);
 	}
 	&__title {
 		font-style: normal;
 		font-weight: 500;
 		font-size: vw(28);
+		line-height: vw(33);
 	}
 	&__description {
 		font-style: normal;
 		font-weight: 300;
 		font-size: vw(18);
-		letter-spacing: 0.128571px;
+		line-height: vw(21);
+		letter-spacing: 0.1px;
 		opacity: 0.5;
 	}
 }
