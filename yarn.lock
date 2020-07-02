@@ -9612,9 +9612,9 @@ rc-switch@~3.2.0:
     rc-util "^5.0.1"
 
 rc-table@~7.8.0:
-  version "7.8.2"
-  resolved "https://registry.yarnpkg.com/rc-table/-/rc-table-7.8.2.tgz#6c0759881f748f630755bfd4eb4fa79ff82ae16c"
-  integrity sha512-YYCZhorkl70f54tJhZsUdbqEYV6bYgIrKQz6FOkz5DXerM4fstOfac7fjYAzNymP1vhMM4KBi9vYd0lBjSRwfg==
+  version "7.8.3"
+  resolved "https://registry.yarnpkg.com/rc-table/-/rc-table-7.8.3.tgz#ca7d2682fc34e16296f4d14965b327b4114f9fad"
+  integrity sha512-d+nCwb3/5nGWNOpLmSzJGVkJ8CEnyGZfYoTWETVvT6pTHesiFVy8ofFcEpUIG0jLoEvfiuVH1G54E+MF32UDxQ==
   dependencies:
     "@babel/runtime" "^7.10.1"
     classnames "^2.2.5"
