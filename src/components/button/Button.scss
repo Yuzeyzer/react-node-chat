@@ -30,18 +30,35 @@
 		height: vw(50);
 		border-right-width: 0 !important;
 
+		@media screen and (max-width: 1024px) {
+			height: vmin(30);
+			padding: vmin(5) 0;
+		}
+
 		input {
 			font-size: vw(16);
 			line-height: vw(19);
+			@media screen and (max-width: 1024px) {
+				font-size: vmin(16);
+				line-height: vmin(19);
+			}
 		}
 
 		.ant-input-prefix {
 			margin-right: vw(10);
+			@media screen and (max-width: 1024px) {
+				margin-right: vmin(10);
+			}
 
 			svg {
 				width: vw(14);
 				height: vw(14);
+				@media screen and (max-width: 1024px) {
+					width: vmin(14);
+					height: vmin(14);
+				}
 			}
 		}
 	}
 }
+
