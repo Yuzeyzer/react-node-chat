@@ -4,13 +4,13 @@ import { Form, Input } from 'antd';
 import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from '../../../components';
 
-class LoginForm extends Component {
-	formRef = React.createRef();
+class RegisterForm extends Component {
+  formRef = React.createRef();
   render() {
     return (
       <div>
         <div className='auth__header'>
-          <h1 className='auth__title title'>ВХОД</h1>
+          <h1 className='auth__title title'>Регистрация</h1>
         </div>
         <AuthForm>
           <Form
@@ -20,6 +20,15 @@ class LoginForm extends Component {
               remember: true,
             }}
             className='login-form'>
+            <Form.Item
+              name='E-mail'
+              rules={[{ required: true, message: 'Please input your E-mail!' }]}>
+              <Input
+                className='button--input'
+                prefix={<Icon type='mail' style={{ color: 'rgba(0,0,0,.25)' }} />}
+                placeholder='E-mail'
+              />
+            </Form.Item>
             <Form.Item
               name='username'
               rules={[{ required: true, message: 'Please input your Username!' }]}>
@@ -39,12 +48,22 @@ class LoginForm extends Component {
                 placeholder='Password'
               />
             </Form.Item>
+            <Form.Item
+              name='password'
+              rules={[{ required: true, message: 'Please input your Password!' }]}>
+              <Input
+                className='button--input'
+                prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
+                type='password'
+                placeholder='Confirm Password'
+              />
+            </Form.Item>
             <Form.Item>
               <Button type='primary' htmlType='submit' className='button--large'>
-                Войти в Аккаунт
+                ЗАРЕГИСТРИРОВАТЬСЯ
               </Button>
-              <Link to='/register' className='auth__register-link'>
-                Зарегистрироваться
+              <Link to='/login' className='auth__register-link'>
+                Войти в аккаунт
               </Link>
             </Form.Item>
           </Form>
@@ -54,5 +73,4 @@ class LoginForm extends Component {
   }
 }
 
-
-export default LoginForm;
+export default RegisterForm;

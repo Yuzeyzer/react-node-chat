@@ -1,25 +1,25 @@
 import React from 'react';
-import LoginForm from '../../modules/loginForm/containers/loginForm';
+import { LoginForm, RegisterForm } from 'modules';
+import { Route } from 'react-router-dom';
 
 import './auth.scss';
 
 import bg from '../../images/auth-bg.png';
 
 const Auth = () => {
-  {
-    return (
-      <section className='auth'>
-        <div className='auth__content'>
-          <div className='auth__column'>
-            <img className='auth__img' src={bg} alt='' />
-          </div>
-          <div className='auth__column'>
-            <LoginForm />
-          </div>
+  return (
+    <section className='auth'>
+      <div className='auth__content'>
+        <div className='auth__column'>
+          <img className='auth__img' src={bg} alt='' />
         </div>
-      </section>
-    );
-  }
+        <div className='auth__column'>
+          <Route exact path={['/', '/login']} component={LoginForm} />
+          <Route exact path='/register' component={RegisterForm} />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Auth;
@@ -52,4 +52,4 @@ export default Auth;
 //       console.log('Received values of form: ', values);
 //     }
 //   });
-// };
+// };c

@@ -32,6 +32,7 @@
 		margin: 0 auto vw(50);
 	}
 	&__title {
+		text-transform: uppercase;
 		font-style: normal;
 		font-weight: 500;
 		font-size: vw(25);
@@ -40,6 +41,12 @@
 			font-size: vmin(25);
 			line-height: vmin(33);
 		}
+	}
+
+	&__register-link {
+		display: block;
+		text-align: center;
+		color: #ADADAD;
 	}
 	.title {
 		position: relative;
@@ -57,6 +64,7 @@
 		}
 	}
 }
+
 
 .ant-input-affix-wrapper-focused {
 	border-color: #40a9ff;
