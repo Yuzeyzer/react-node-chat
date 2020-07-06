@@ -392,7 +392,7 @@ class RegisterForm extends Component {
                   </clipPath>
                 </defs>
               </svg>
-              <h3 className='auth__confirm-title'>Подвердите свой аккаунт</h3>
+              <h3 className='auth__confirm-title'>Подтвердите свой аккаунт</h3>
               <p className='auth__confirm-info'>
                 На Вашу почту отправлено письмо с ссылкой на подтверждение аккаунта.
               </p>
