@@ -1,27 +1,28 @@
 @import "~styles/helpers/variables";
 .message {
+	$self: &;
 	display: flex;
-	max-width: vw(440);
-
 	margin-bottom: vw(15);
 	&__avatar {
 		display: flex;
 		flex-direction: column-reverse;
 		img {
 			border-radius: 50%;
-			max-width: vw(33);
-			max-height: vw(33);
+			max-width: vw(40);
+			max-height: vw(40);
 			margin-right: vw(13);
-			margin-bottom: vw(22);
+			margin-bottom: vw(15);
 		}
 	}
 
 	&__content {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 	}
 
 	&__bubble {
+		max-width: vw(440);
 		background: $blue;
 		box-shadow: 0px vw(5) vw(5) rgba(54, 116, 255, 0.196733);
 		border-radius: vw(12) vw(12) vw(12) 0;
@@ -43,5 +44,38 @@
 		line-height: vw(14);
 		mix-blend-mode: normal;
 		opacity: 0.5;
+	}
+
+	&-isMe {
+		display: flex;
+		flex-direction: row-reverse;
+		#{$self}__content {
+			margin-bottom: vw(15);
+		}
+		#{$self}__readed,#{$self}__unreaded {
+			position: absolute;
+			left: vw(-30);
+			bottom: vw(22);
+		}
+		#{$self}__avatar {
+			margin-bottom: vw(15);
+			text-align: right;
+			img {
+				margin-right: 0;
+				margin-left: vw(13);
+			}
+		}
+		#{$self}__bubble {
+			background: #ffffff;
+			border: 1px solid #ececec;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.0220444);
+			border-radius: vw(12) vw(12) 0 vw(12);
+		}
+		#{$self}__text {
+			color: $black;
+		}
+		#{$self}__date {
+			text-align: right;
+		}
 	}
 }
