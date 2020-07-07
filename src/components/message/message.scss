@@ -1,0 +1,35 @@
+@import "~styles/helpers/variables";
+.message {
+	display: flex;
+	&__avatar {
+		img {
+			border-radius: 50%;
+			max-width: vw(33);
+			max-height: vw(33);
+			margin-right: vw(13);
+			margin-bottom: vw(18);
+		}
+	}
+
+	&__bubble {
+		background: $blue;
+		box-shadow: 0px 5px 5px rgba(54, 116, 255, 0.196733);
+		border-radius: 12px 12px 12px 0px;
+		margin-bottom: vw(8);
+		padding: vw(15);
+	}
+
+	&__text {
+		color: $white;
+		margin: 0;
+	}
+
+	&__date {
+		font-style: normal;
+		font-weight: normal;
+		font-size: vw(12);
+		line-height: vw(14);
+		mix-blend-mode: normal;
+		opacity: 0.4;
+	}
+}

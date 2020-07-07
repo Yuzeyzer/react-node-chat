@@ -52,6 +52,9 @@
 		text-align: center;
 		color: #adadad;
 		font-size: vw(16);
+		@media screen and (max-width: 1024px) {
+			font-size: vmin(12);
+		}
 	}
 
 	&__confirm {

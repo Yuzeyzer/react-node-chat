@@ -7,7 +7,7 @@ import { Button, AuthForm } from 'components';
 class RegisterForm extends Component {
   formRef = React.createRef();
   render() {
-    const succes = true;
+    const succes = false;
 
     return (
       <div>
@@ -78,25 +78,25 @@ class RegisterForm extends Component {
                 viewBox='0 0 100 100'
                 fill='none'
                 xmlns='http://www.w3.org/2000/svg'>
-                <g clip-path='url(#clip0)'>
+                <g clipPath='url(#clip0)'>
                   <path
                     d='M2.96184 59.4014C2.96184 59.4014 2.87672 59.1365 2.73901 58.6439'
                     stroke='#4CA5FF'
-                    stroke-width='9'
-                    stroke-miterlimit='10'
+                    strokeWidth='9'
+                    strokeMiterlimit='10'
                   />
                   <path
                     d='M2.33618 57.1078C-0.707054 44.7129 -10.1948 -12.4121 84.9155 23.2497'
                     stroke='#CD4353'
-                    stroke-width='9'
-                    stroke-miterlimit='10'
-                    stroke-dasharray='12.04 12.04'
+                    strokeWidth='9'
+                    strokeMiterlimit='10'
+                    strokeDasharray='12.04 12.04'
                   />
                   <path
                     d='M85.6274 23.5145L86.3347 23.7794'
                     stroke='#69F0AE'
-                    stroke-width='9'
-                    stroke-miterlimit='10'
+                    strokeWidth='9'
+                    strokeMiterlimit='10'
                   />
                   <path
                     d='M74.6852 67.5706C74.6858 64.8923 73.7416 62.3101 72.0374 60.3294C70.3332 58.3486 67.9915 57.1119 65.4708 56.8611C62.95 56.6103 60.4314 57.3636 58.408 58.9736C56.3846 60.5835 55.0019 62.9342 54.5305 65.5657L23.2856 64.6692L23.6286 70.3476C23.6286 70.3476 19.1733 81.2222 42.5891 84.1197V95.1108H69.659V76.8363C71.1877 75.8894 72.4558 74.5362 73.3375 72.9109C74.2191 71.2855 74.6837 69.4446 74.6852 67.5706V67.5706Z'
@@ -251,9 +251,9 @@ class RegisterForm extends Component {
                     x2='48.9873'
                     y2='56.8152'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint1_linear'
@@ -262,9 +262,9 @@ class RegisterForm extends Component {
                     x2='9656.3'
                     y2='2890.48'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint2_linear'
@@ -273,9 +273,9 @@ class RegisterForm extends Component {
                     x2='22016.8'
                     y2='5572.26'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint3_linear'
@@ -284,9 +284,9 @@ class RegisterForm extends Component {
                     x2='11567'
                     y2='11886.4'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint4_linear'
@@ -295,9 +295,9 @@ class RegisterForm extends Component {
                     x2='23650.3'
                     y2='7012.52'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint5_linear'
@@ -306,9 +306,9 @@ class RegisterForm extends Component {
                     x2='43.3528'
                     y2='17.6694'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-opacity='0.12' />
-                    <stop offset='0.55' stop-opacity='0.09' />
-                    <stop offset='1' stop-opacity='0.02' />
+                    <stop stopOpacity='0.12' />
+                    <stop offset='0.55' stopOpacity='0.09' />
+                    <stop offset='1' stopOpacity='0.02' />
                   </linearGradient>
                   <linearGradient
                     id='paint6_linear'
@@ -317,9 +317,9 @@ class RegisterForm extends Component {
                     x2='8787.13'
                     y2='3608.26'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint7_linear'
@@ -328,9 +328,9 @@ class RegisterForm extends Component {
                     x2='5821.92'
                     y2='2172.63'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-opacity='0.12' />
-                    <stop offset='0.55' stop-opacity='0.09' />
-                    <stop offset='1' stop-opacity='0.02' />
+                    <stop stopOpacity='0.12' />
+                    <stop offset='0.55' stopOpacity='0.09' />
+                    <stop offset='1' stopOpacity='0.02' />
                   </linearGradient>
                   <linearGradient
                     id='paint8_linear'
@@ -339,9 +339,9 @@ class RegisterForm extends Component {
                     x2='8441.99'
                     y2='4794.12'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint9_linear'
@@ -350,9 +350,9 @@ class RegisterForm extends Component {
                     x2='7265.13'
                     y2='6217.21'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint10_linear'
@@ -361,9 +361,9 @@ class RegisterForm extends Component {
                     x2='5850.83'
                     y2='7221.45'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <linearGradient
                     id='paint11_linear'
@@ -372,9 +372,9 @@ class RegisterForm extends Component {
                     x2='8896.86'
                     y2='2656.6'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-opacity='0.12' />
-                    <stop offset='0.55' stop-opacity='0.09' />
-                    <stop offset='1' stop-opacity='0.02' />
+                    <stop stopOpacity='0.12' />
+                    <stop offset='0.55' stopOpacity='0.09' />
+                    <stop offset='1' stopOpacity='0.02' />
                   </linearGradient>
                   <linearGradient
                     id='paint12_linear'
@@ -383,9 +383,9 @@ class RegisterForm extends Component {
                     x2='8582.03'
                     y2='8325.29'
                     gradientUnits='userSpaceOnUse'>
-                    <stop stop-color='#808080' stop-opacity='0.25' />
-                    <stop offset='0.54' stop-color='#808080' stop-opacity='0.12' />
-                    <stop offset='1' stop-color='#808080' stop-opacity='0.1' />
+                    <stop stopColor='#808080' stopOpacity='0.25' />
+                    <stop offset='0.54' stopColor='#808080' stopOpacity='0.12' />
+                    <stop offset='1' stopColor='#808080' stopOpacity='0.1' />
                   </linearGradient>
                   <clipPath id='clip0'>
                     <rect width='100' height='100' fill='white' />

@@ -1,12 +1,15 @@
 import React from 'react';
-import { Auth } from './pages';
+import { Route } from 'react-router-dom';
+import { Auth, Home } from './pages';
 
 import './styles/_index.scss';
 
 function App() {
   return (
     <div className='App'>
-      <Auth />
+      <Route exact path={['/', '/login', '/register']} component={Auth} />
+      
+      <Route exact path='/profile' component={Home} />
     </div>
   );
 }
