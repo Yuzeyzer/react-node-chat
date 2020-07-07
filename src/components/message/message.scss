@@ -37,6 +37,16 @@
 		margin: 0;
 	}
 
+	&__attachments {
+		display: flex;
+		&-item {
+			margin-right: vw(10);
+			margin-bottom: vw(8);
+			cursor: pointer;
+			img {	border-radius: vw(10);}
+		}
+	}
+
 	&__date {
 		font-style: normal;
 		font-weight: normal;
@@ -73,6 +83,7 @@
 		}
 		#{$self}__text {
 			color: $black;
+			font-family: 'Roboto';
 		}
 		#{$self}__date {
 			text-align: right;
