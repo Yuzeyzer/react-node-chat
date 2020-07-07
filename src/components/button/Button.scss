@@ -14,10 +14,11 @@
 			height: vmin(32);
 			padding: vmin(5) vmin(45);
 			font-size: vmin(10);
+			border-radius: vmin(100);
 		}
 	}
 	&--input {
-		margin-bottom: vw(35);
+		margin-bottom: vw(15);
 		padding: vw(17) 0;
 		background: #ffffff;
 		border: none;
@@ -33,14 +34,15 @@
 		@media screen and (max-width: 1024px) {
 			height: vmin(30);
 			padding: vmin(5) 0;
+			margin-bottom: vmin(15);
 		}
 
 		input {
 			font-size: vw(16);
 			line-height: vw(19);
 			@media screen and (max-width: 1024px) {
-				font-size: vmin(16);
-				line-height: vmin(19);
+				font-size: vmin(14);
+				line-height: vmin(17);
 			}
 		}
 
@@ -61,4 +63,3 @@
 		}
 	}
 }
-

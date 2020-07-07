@@ -1,14 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input } from 'antd';
 import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from 'components';
 
-class RegisterForm extends Component {
-  formRef = React.createRef();
-  render() {
+const RegisterForm = (props) => {
+  {
     const succes = false;
-
+    const {
+      values,
+      touched,
+      errors,
+      handleChange,
+      handleBlur,
+      handleSubmit,
+    } = props;
     return (
       <div>
         <div className='auth__header'>
@@ -16,34 +22,30 @@ class RegisterForm extends Component {
         </div>
         <AuthForm>
           {!succes ? (
-            <Form
-              ref={this.formRef}
-              onSubmit={this.handleSubmit}
-              initialValues={{
-                remember: true,
-              }}
-              className='login-form'>
+            <Form onSubmit={handleSubmit} className='login-form'>
               <Form.Item
-                name='E-mail'
-                rules={[{ required: true, message: 'Please input your E-mail!' }]}>
+                validateStatus={!touched.email ? '' : errors.email ? 'error' : 'success'}
+                hasFeedback>
                 <Input
+                  id='email'
                   className='button--input'
                   prefix={<Icon type='mail' style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder='E-mail'
+                  name='email'
+                  value={values.email}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                 />
               </Form.Item>
-              <Form.Item
-                name='username'
-                rules={[{ required: true, message: 'Please input your Username!' }]}>
+              <Form.Item name='username'>
                 <Input
                   className='button--input'
                   prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder='Username'
+                  value={values.name}
                 />
               </Form.Item>
-              <Form.Item
-                name='password'
-                rules={[{ required: true, message: 'Please input your Password!' }]}>
+              <Form.Item name='password'>
                 <Input
                   className='button--input'
                   prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -51,9 +53,7 @@ class RegisterForm extends Component {
                   placeholder='Password'
                 />
               </Form.Item>
-              <Form.Item
-                name='password'
-                rules={[{ required: true, message: 'Please input your Password!' }]}>
+              <Form.Item name='confirm password'>
                 <Input
                   className='button--input'
                   prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -62,7 +62,7 @@ class RegisterForm extends Component {
                 />
               </Form.Item>
               <Form.Item>
-                <Button type='primary' htmlType='submit' className='button--large'>
+                <Button onClick={handleSubmit} type='primary' htmlType='submit' className='button--large'>
                   ЗАРЕГИСТРИРОВАТЬСЯ
                 </Button>
                 <Link to='/login' className='auth__register-link'>
@@ -72,7 +72,8 @@ class RegisterForm extends Component {
             </Form>
           ) : (
             <div className='auth__confirm'>
-              <svg className="auth__confirm-icon"
+              <svg
+                className='auth__confirm-icon'
                 width='100'
                 height='100'
                 viewBox='0 0 100 100'
@@ -402,6 +403,6 @@ class RegisterForm extends Component {
       </div>
     );
   }
-}
+};
 
 export default RegisterForm;

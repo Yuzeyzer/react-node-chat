@@ -2,8 +2,8 @@
 	padding: vw(40) vw(90);
 	min-height: 100%;
 	box-sizing: border-box;
-	@media screen and (max-width:1024px){
-		padding: vmin(40) vmin(90);
+	@media screen and (max-width: 1024px) {
+		padding: vmin(40) vmin(40);
 	}
 	* {
 		padding: 0;
@@ -34,6 +34,10 @@
 	&__header {
 		max-width: vw(350);
 		margin: 0 auto vw(50);
+		@media screen and (max-width: 1024px) {
+			max-width: vmin(350);
+			margin: 0 auto vmin(50);
+		}
 	}
 	&__title {
 		text-transform: uppercase;
@@ -64,7 +68,7 @@
 			display: inline-block;
 			width: vw(100);
 			height: vw(100);
-			@media screen and (max-width:1024px){
+			@media screen and (max-width: 1024px) {
 				width: vmin(100);
 				height: vmin(100);
 			}
@@ -75,7 +79,7 @@
 			font-weight: normal;
 			font-size: vw(22);
 			line-height: vw(25);
-			@media screen and (max-width:1024px){
+			@media screen and (max-width: 1024px) {
 				font-size: vmin(22);
 				line-height: vmin(25);
 			}
@@ -89,7 +93,7 @@
 			letter-spacing: 0.1px;
 			mix-blend-mode: normal;
 			opacity: 0.5;
-			@media screen and (max-width:1024px){
+			@media screen and (max-width: 1024px) {
 				font-size: vmin(14);
 				line-height: vmin(26);
 			}
@@ -110,27 +114,31 @@
 			}
 		}
 	}
-}
-
-.ant-input-affix-wrapper-focused {
-	border-color: #40a9ff;
-	border-right-width: 0 !important;
-	outline: 0;
-	box-shadow: 0 0 0 0;
-}
-
-.ant-form-item-explain {
-	text-align: left;
-	margin-top: vw(-30);
-	font-size: vw(14);
-	@media screen and (max-width: 1024px) {
-		font-size: vmin(14);
+	.ant-form-item-children-icon {
+		svg {
+			top: vw(-30) !important;
+		}
 	}
-}
+	.ant-input-affix-wrapper-focused {
+		border-color: #40a9ff;
+		border-right-width: 0 !important;
+		outline: 0;
+		box-shadow: 0 0 0 0;
+	}
 
-.ant-form-item-has-error .ant-input:focus,
-.ant-form-item-has-error .ant-input-affix-wrapper:focus,
-.ant-form-item-has-error .ant-input-focused,
-.ant-form-item-has-error .ant-input-affix-wrapper-focused {
-	box-shadow: 0 0 0 0;
+	.ant-form-item-explain {
+		text-align: left;
+		margin-top: vw(-30);
+		font-size: vw(14);
+		@media screen and (max-width: 1024px) {
+			font-size: vmin(14);
+		}
+	}
+
+	.ant-form-item-has-error .ant-input:focus,
+	.ant-form-item-has-error .ant-input-affix-wrapper:focus,
+	.ant-form-item-has-error .ant-input-focused,
+	.ant-form-item-has-error .ant-input-affix-wrapper-focused {
+		box-shadow: 0 0 0 0;
+	}
 }

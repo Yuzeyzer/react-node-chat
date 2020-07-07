@@ -24,7 +24,7 @@
 	&__bubble {
 		max-width: vw(440);
 		background: $blue;
-		box-shadow: 0px vw(5) vw(5) rgba(54, 116, 255, 0.196733);
+		box-shadow: 0 vw(5) vw(5) rgba(54, 116, 255, 0.196733);
 		border-radius: vw(12) vw(12) vw(12) 0;
 		margin-bottom: vw(8);
 		padding: vw(15);
@@ -40,10 +40,18 @@
 	&__attachments {
 		display: flex;
 		&-item {
-			margin-right: vw(10);
+			margin-right: vw(7);
 			margin-bottom: vw(8);
 			cursor: pointer;
-			img {	border-radius: vw(10);}
+			img {
+				border-radius: vw(10);
+				width: vw(50);
+				height: vw(50);
+				transition: 0.3s;
+				&:hover {
+					opacity: 0.8;
+				}
+			}
 		}
 	}
 
@@ -62,10 +70,12 @@
 		#{$self}__content {
 			margin-bottom: vw(15);
 		}
-		#{$self}__readed,#{$self}__unreaded {
+		#{$self}__readed,
+		#{$self}__unreaded {
 			position: absolute;
 			left: vw(-30);
 			bottom: vw(22);
+			width: vw(18);
 		}
 		#{$self}__avatar {
 			margin-bottom: vw(15);
@@ -77,13 +87,13 @@
 		}
 		#{$self}__bubble {
 			background: #ffffff;
-			border: 1px solid #ececec;
-			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.0220444);
+			border: vw(1) solid #ececec;
+			box-shadow: 0 vw(4) vw(4) rgba(0, 0, 0, 0.0220444);
 			border-radius: vw(12) vw(12) 0 vw(12);
 		}
 		#{$self}__text {
 			color: $black;
-			font-family: 'Roboto';
+			font-family: "Roboto";
 		}
 		#{$self}__date {
 			text-align: right;
