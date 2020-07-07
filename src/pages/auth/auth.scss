@@ -116,7 +116,9 @@
 	}
 	.ant-form-item-children-icon {
 		svg {
-			top: vw(-30) !important;
+			top: vw(-20) !important;
+			width: vw(20);
+			height: vw(20);
 		}
 	}
 	.ant-input-affix-wrapper-focused {
