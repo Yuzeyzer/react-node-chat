@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-// import classNames from 'classnames';
-
+import classNames from 'classnames';
+import distanseInWordsToNow from 'date-fns/distance_in_words_to_now';
+import ruLocale from 'date-fns/locale/ru';
 import './message.scss';
 
 const Message = ({ avatar, user, text, date }) => {
@@ -14,7 +15,9 @@ const Message = ({ avatar, user, text, date }) => {
         <div className='message__bubble'>
           <p className='message__text'>{text}</p>
         </div>
-        <time className='message__date'>Вчера, в 12:31</time>
+        <time className='message__date'>
+          {distanseInWordsToNow(date, { addSuffix: true, locale: ruLocale })}
+        </time>
       </div>
     </div>
   );
@@ -27,7 +30,7 @@ Message.defaultProps = {
 Message.propTypes = {
   avatar: PropTypes.string,
   text: PropTypes.string,
-  date: PropTypes.string,
+  // date: PropTypes.string,
   userr: PropTypes.object,
 };
 

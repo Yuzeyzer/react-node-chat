@@ -8,7 +8,6 @@ function App() {
   return (
     <div className='App'>
       <Route exact path={['/', '/login', '/register']} component={Auth} />
-      
       <Route exact path='/profile' component={Home} />
     </div>
   );
