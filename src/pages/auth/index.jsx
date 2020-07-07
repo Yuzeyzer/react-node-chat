@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom';
 
 import './auth.scss';
 
-import bg from '../../images/auth-bg.png';
+import bg from '../../assets/auth-bg.png';
 
 const Auth = () => {
   return (
