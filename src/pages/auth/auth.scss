@@ -130,7 +130,9 @@
 
 	.ant-form-item-explain {
 		text-align: left;
-		margin-top: vw(-30);
+		position: absolute;
+		left: 0;
+		bottom: 0;
 		font-size: vw(14);
 		@media screen and (max-width: 1024px) {
 			font-size: vmin(14);
