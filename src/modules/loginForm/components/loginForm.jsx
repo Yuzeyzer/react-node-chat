@@ -5,7 +5,7 @@ import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from '../../../components';
 
 class LoginForm extends Component {
-	formRef = React.createRef();
+  formRef = React.createRef();
   render() {
     return (
       <div>
@@ -20,18 +20,14 @@ class LoginForm extends Component {
               remember: true,
             }}
             className='login-form'>
-            <Form.Item
-              name='username'
-              rules={[{ required: true, message: 'Please input your Username!' }]}>
+            <Form.Item name='username'>
               <Input
                 className='button--input'
                 prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
                 placeholder='Username'
               />
             </Form.Item>
-            <Form.Item
-              name='password'
-              rules={[{ required: true, message: 'Please input your Password!' }]}>
+            <Form.Item name='password'>
               <Input
                 className='button--input'
                 prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}

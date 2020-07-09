@@ -7,14 +7,7 @@ import { Button, AuthForm } from 'components';
 const RegisterForm = (props) => {
   {
     const succes = false;
-    const {
-      values,
-      touched,
-      errors,
-      handleChange,
-      handleBlur,
-      handleSubmit,
-    } = props;
+    const { values, touched, errors, handleChange, handleBlur, handleSubmit } = props;
     return (
       <div>
         <div className='auth__header'>
@@ -37,20 +30,31 @@ const RegisterForm = (props) => {
                   onBlur={handleBlur}
                 />
               </Form.Item>
-              <Form.Item name='username'>
+              <Form.Item
+                validateStatus={!touched.username ? '' : errors.username ? 'error' : 'success'}
+                hasFeedback>
                 <Input
+                  id='username'
                   className='button--input'
                   prefix={<Icon type='user' style={{ color: 'rgba(0,0,0,.25)' }} />}
                   placeholder='Username'
-                  value={values.name}
+                  value={values.username}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                 />
               </Form.Item>
-              <Form.Item name='password'>
+              <Form.Item
+                validateStatus={!touched.password ? '' : errors.password ? 'error' : 'success'}
+                hasFeedback>
                 <Input
+                  id='password'
                   className='button--input'
                   prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
                   type='password'
                   placeholder='Password'
+                  value={values.password}
+                  onChange={handleChange}
+                  onBlur={handleBlur}
                 />
               </Form.Item>
               <Form.Item name='confirm password'>
@@ -62,7 +66,11 @@ const RegisterForm = (props) => {
                 />
               </Form.Item>
               <Form.Item>
-                <Button onClick={handleSubmit} type='primary' htmlType='submit' className='button--large'>
+                <Button
+                  onClick={handleSubmit}
+                  type='primary'
+                  htmlType='submit'
+                  className='button--large'>
                   ЗАРЕГИСТРИРОВАТЬСЯ
                 </Button>
                 <Link to='/login' className='auth__register-link'>

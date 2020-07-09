@@ -11,6 +11,16 @@ export default withFormik({
       errors.email = 'Required';
     } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
       errors.email = 'Invalid email address';
+		}
+		if (!values.password) {
+      errors.password = 'Input your password, please';
+    } else if (!/^[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.password = 'Invalid password';
+		}
+		if (!values.username) {
+      errors.username = 'Input your username, please';
+    } else if (!/^[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.username = 'Invalid username';
     }
 
     return errors;
