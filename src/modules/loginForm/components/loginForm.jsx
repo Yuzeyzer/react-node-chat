@@ -52,10 +52,10 @@ const LoginForm = (props) => {
                 type='primary'
                 htmlType='submit'
                 className='button--large'>
-               Войти в аккаунт
+                Войти в аккаунт
               </Button>
               <Link to='/register' className='auth__register-link'>
-              Зарегистрироваться
+                Зарегистрироваться
               </Link>
             </Form.Item>
           </Form>
