@@ -7,13 +7,11 @@ import { Button, AuthForm } from '../../../components';
 const validate = (key, touched, errors) => {
   if (touched[key]) {
     if (errors[key]) {
-      return "error";
-    } else {
-      return "success";
+      return 'error';
     }
-  } else {
-    return "";
+    return 'success';
   }
+  return '';
 };
 
 const LoginForm = (props) => {
