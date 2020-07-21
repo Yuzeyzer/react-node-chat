@@ -4,6 +4,18 @@ import { Form, Input } from 'antd';
 import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from '../../../components';
 
+const validate = (key, touched, errors) => {
+  if (touched[key]) {
+    if (errors[key]) {
+      return "error";
+    } else {
+      return "success";
+    }
+  } else {
+    return "";
+  }
+};
+
 const LoginForm = (props) => {
   const { values, touched, errors, handleChange, handleBlur, handleSubmit } = props;
   return (
@@ -15,7 +27,7 @@ const LoginForm = (props) => {
         {
           <Form onSubmit={handleSubmit} className='login-form'>
             <Form.Item
-              validateStatus={!touched.email ? '' : errors.email ? 'error' : 'success'}
+              validateStatus={validate("email", touched, errors)}
               hasFeedback
               help={!touched.email ? '' : errors.email}>
               <Input
@@ -31,7 +43,7 @@ const LoginForm = (props) => {
             </Form.Item>
 
             <Form.Item
-              validateStatus={!touched.password ? '' : errors.password ? 'error' : 'success'}
+              validateStatus={validate("password", touched, errors)}
               hasFeedback
               help={!touched.password ? '' : errors.password}>
               <Input

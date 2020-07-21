@@ -3,8 +3,13 @@ import { withFormik } from 'formik';
 import validatForm from 'utils/validate';
 
 export default withFormik({
+  enableReinitialize: true,
+  mapPropsToValues: () => ({
+    email: "",
+    password: ""
+  }),
   validate: (values) => {
-		const errors = {};
+		let errors = {};
 		validatForm({ Auth: true, values, errors})
 
     return errors;

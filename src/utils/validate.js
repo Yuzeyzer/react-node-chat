@@ -1,4 +1,5 @@
 export default ({ isAuth, values, errors }) => {
+  console.log(errors)
   const rules = {
     email: ( value) => {
       if (!value) {
