@@ -5,12 +5,12 @@ import validatForm from 'utils/validate';
 export default withFormik({
   enableReinitialize: true,
   mapPropsToValues: () => ({
-    email: "",
-    password: ""
+    email: '',
+    password: ''
   }),
   validate: (values) => {
-		let errors = {};
-		validatForm({ Auth: true, values, errors})
+    let errors = {};
+    validatForm({ Auth: true, values, errors });
 
     return errors;
   },

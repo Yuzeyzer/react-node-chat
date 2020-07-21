@@ -27,7 +27,7 @@ const LoginForm = (props) => {
         {
           <Form onSubmit={handleSubmit} className='login-form'>
             <Form.Item
-              validateStatus={validate("email", touched, errors)}
+              validateStatus={validate('email', touched, errors)}
               hasFeedback
               help={!touched.email ? '' : errors.email}>
               <Input
@@ -43,7 +43,7 @@ const LoginForm = (props) => {
             </Form.Item>
 
             <Form.Item
-              validateStatus={validate("password", touched, errors)}
+              validateStatus={validate('password', touched, errors)}
               hasFeedback
               help={!touched.password ? '' : errors.password}>
               <Input

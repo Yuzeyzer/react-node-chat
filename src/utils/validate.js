@@ -1,7 +1,6 @@
 export default ({ isAuth, values, errors }) => {
-  console.log(errors)
   const rules = {
-    email: ( value) => {
+    email: value => {
       if (!value) {
         errors.email = 'Введите Ваш адрес почты, пожалуйста';
       } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
@@ -23,5 +22,5 @@ export default ({ isAuth, values, errors }) => {
       }
     },
   };
-  Object.keys(values).keys.forEach((key) => rules[key] && rules[key](values[key]));
+  Object.keys(values).forEach(key => rules[key] && rules[key](values[key]));
 };
