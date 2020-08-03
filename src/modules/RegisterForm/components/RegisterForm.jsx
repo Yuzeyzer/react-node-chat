@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Form, Input } from 'antd';
 import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from 'components';
+import { validateField } from 'utils/helpers';
 
 const RegisterForm = (props) => {
   const succes = false;
@@ -16,7 +17,7 @@ const RegisterForm = (props) => {
         {!succes ? (
           <Form onSubmit={handleSubmit} className='login-form'>
             <Form.Item
-              validateStatus={!touched.email ? '' : errors.email ? 'error' : 'success'}
+              validateStatus={validateField('email', touched, errors)}
               hasFeedback
               help={!touched.email ? '' : errors.email}>
               <Input
@@ -31,7 +32,7 @@ const RegisterForm = (props) => {
               />
             </Form.Item>
             <Form.Item
-              validateStatus={!touched.username ? '' : errors.username ? 'error' : 'success'}
+              validateStatus={validateField('username', touched, errors)}
               hasFeedback
               help={!touched.username ? '' : errors.username}>
               <Input
@@ -45,7 +46,7 @@ const RegisterForm = (props) => {
               />
             </Form.Item>
             <Form.Item
-              validateStatus={!touched.password ? '' : errors.password ? 'error' : 'success'}
+              validateStatus={validateField('password', touched, errors)}
               hasFeedback
               help={!touched.password ? '' : errors.password}>
               <Input
@@ -59,8 +60,13 @@ const RegisterForm = (props) => {
                 onBlur={handleBlur}
               />
             </Form.Item>
-            <Form.Item name='confirm password'>
+            <Form.Item
+              validateStatus={validateField('password', touched, errors)}
+              name='confirm password'
+              hasFeedback
+              help={!touched.password ? '' : errors.password}>
               <Input
+                id='password'
                 className='button--input'
                 prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
                 type='password'

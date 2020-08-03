@@ -3,16 +3,7 @@ import { Link } from 'react-router-dom';
 import { Form, Input } from 'antd';
 import { Icon } from '@ant-design/compatible';
 import { Button, AuthForm } from '../../../components';
-
-const validate = (key, touched, errors) => {
-  if (touched[key]) {
-    if (errors[key]) {
-      return 'error';
-    }
-    return 'success';
-  }
-  return '';
-};
+import { validateField } from 'utils/helpers';
 
 const LoginForm = (props) => {
   const { values, touched, errors, handleChange, handleBlur, handleSubmit } = props;
@@ -25,7 +16,7 @@ const LoginForm = (props) => {
         {
           <Form onSubmit={handleSubmit} className='login-form'>
             <Form.Item
-              validateStatus={validate('email', touched, errors)}
+              validateStatus={validateField('email', touched, errors)}
               hasFeedback
               help={!touched.email ? '' : errors.email}>
               <Input
@@ -41,7 +32,7 @@ const LoginForm = (props) => {
             </Form.Item>
 
             <Form.Item
-              validateStatus={validate('password', touched, errors)}
+              validateStatus={validateField('password', touched, errors)}
               hasFeedback
               help={!touched.password ? '' : errors.password}>
               <Input
