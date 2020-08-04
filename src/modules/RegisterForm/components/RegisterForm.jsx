@@ -60,16 +60,11 @@ const RegisterForm = (props) => {
                 onBlur={handleBlur}
               />
             </Form.Item>
-            <Form.Item
-              validateStatus={validateField('password', touched, errors)}
-              name='confirm password'
-              hasFeedback
-              help={!touched.password ? '' : errors.password}>
+            <Form.Item validateStatus={validateField('password', touched, errors)}>
               <Input
-                id='password'
                 className='button--input'
                 prefix={<Icon type='lock' style={{ color: 'rgba(0,0,0,.25)' }} />}
-                type='password'
+                type='password2'
                 placeholder='Confirm Password'
               />
             </Form.Item>
