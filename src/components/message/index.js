@@ -23,7 +23,16 @@ const Message = ({ avatar, user, text, date, isMe, isTyping, isReaded, attachmen
           {isMe && !isReaded && (
             <img className={'message__unreaded'} src={unreadedSvg} alt='is unread' />
           )}
-          <div className='message__bubble'>{text && <p className='message__text'>{text}</p>}</div>
+          <div className='message__bubble'>
+            {text && <p className='message__text'>{text}</p>}
+           {isTyping && <div className='message__typing typing'>
+              <div class='typing__indicator'>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>}
+          </div>
           <div className='message__attachments'>
             {attachments &&
               attachments.map((item) => (
