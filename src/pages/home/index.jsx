@@ -61,6 +61,11 @@ function Home() {
         isMe={true}
         isReaded={false}
       />
+      <Message
+        avatar='https://lh3.googleusercontent.com/QJZ3PHj7-555lvKB00r3y1RZoTRztBTkssysQOTEL0xiM-_zIaGzAI_IGiOukfkco4V5=s85'
+        isMe={true}
+        isReaded={false}
+      />
     </div>
   );
 }

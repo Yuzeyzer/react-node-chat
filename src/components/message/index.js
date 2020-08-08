@@ -6,13 +6,14 @@ import classNames from 'classnames';
 import readedSvg from 'assets/svg/readed.svg';
 import unreadedSvg from 'assets/svg/unreaded.svg';
 import './message.scss';
+import avatar1 from 'assets/avatars/1.png';
 
-const Message = ({ avatar, user, text, date, isMe, isReaded, attachments }) => {
+const Message = ({ avatar, user, text, date, isMe, isTyping, isReaded, attachments }) => {
   console.log(attachments);
   return (
-    <div className={classNames('message', { 'message-isMe': isMe })}>
+    <div className={classNames('message', { 'message-isMe': isMe, 'message-is-typing': isTyping })}>
       <div className='message__avatar'>
-        <img src={avatar} alt={`Avatar ${user.fullname}`} />
+        <img src={avatar1} alt={`Avatar ${user.fullname}`} />
       </div>
       <div className='message__content'>
         <div>
@@ -22,9 +23,7 @@ const Message = ({ avatar, user, text, date, isMe, isReaded, attachments }) => {
           {isMe && !isReaded && (
             <img className={'message__unreaded'} src={unreadedSvg} alt='is unread' />
           )}
-          <div className='message__bubble'>
-            <p className='message__text'>{text}</p>
-          </div>
+          <div className='message__bubble'>{text && <p className='message__text'>{text}</p>}</div>
           <div className='message__attachments'>
             {attachments &&
               attachments.map((item) => (
@@ -34,9 +33,11 @@ const Message = ({ avatar, user, text, date, isMe, isReaded, attachments }) => {
               ))}
           </div>
         </div>
-        <time className='message__date'>
-          {distanseInWordsToNow(date, { addSuffix: true, locale: ruLocale })}
-        </time>
+        {date && (
+          <time className='message__date'>
+            {distanseInWordsToNow(date, { addSuffix: true, locale: ruLocale })}
+          </time>
+        )}
       </div>
     </div>
   );
@@ -52,6 +53,7 @@ Message.propTypes = {
   date: PropTypes.string,
   user: PropTypes.object,
   attachments: PropTypes.array,
+  isTyping: PropTypes.bool,
 };
 
 export default Message;
