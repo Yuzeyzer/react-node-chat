@@ -115,8 +115,8 @@
 		&::after {
 			content: "";
 			position: absolute;
-			bottom: -2px;
-			left: -2px;
+			bottom: vw(-2);
+			left: vw(-2);
 			height: vw(10);
 			width: vw(10);
 			border-radius: 50%;
@@ -132,7 +132,7 @@
 			height: vw(10);
 			width: vw(10);
 			float: left;
-			margin: 0 1px;
+			margin: 0 vw(1);
 			background-color: #9e9ea1;
 			display: block;
 			border-radius: 50%;

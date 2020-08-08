@@ -9,7 +9,6 @@ import './message.scss';
 import avatar1 from 'assets/avatars/1.png';
 
 const Message = ({ avatar, user, text, date, isMe, isTyping, isReaded, attachments }) => {
-  console.log(attachments);
   return (
     <div className={classNames('message', { 'message-isMe': isMe, 'message-is-typing': isTyping })}>
       <div className='message__avatar'>
