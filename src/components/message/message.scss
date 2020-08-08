@@ -100,73 +100,36 @@
 		}
 	}
 	&__typing {
-		$ti-color-bg: #e6e7ed;
-		background-color: $ti-color-bg;
-		will-change: transform;
-		width: auto;
-		border-radius: vw(50);
-		padding: vw(5);
-		display: table;
-		margin: 0 auto;
-		position: relative;
-		-webkit-animation: 2s bulge infinite ease-out;
-		animation: 2s bulge infinite ease-out;
-		&::before,
-		&::after {
-			content: "";
-			position: absolute;
-			bottom: vw(-2);
-			left: vw(-2);
-			height: vw(10);
-			width: vw(10);
-			border-radius: 50%;
-			background-color: $ti-color-bg;
-		}
-		&::after {
-			height: vw(5);
-			width: vw(5);
-			left: vw(-5);
-			bottom: vw(-5);
-		}
 		span {
-			height: vw(10);
-			width: vw(10);
-			float: left;
-			margin: 0 vw(1);
-			background-color: #9e9ea1;
-			display: block;
+			height: vw(8);
+			width: vw(8);
+			margin: 0 vw(8) 0 0;
+			background-color: #fff;
+			display: inline-block;
 			border-radius: 50%;
-			opacity: 0.4;
-			@for $i from 1 through 3 {
-				&:nth-of-type(#{$i}) {
-					-webkit-animation: 1s blink infinite ($i * 0.3333s);
-					animation: 1s blink infinite ($i * 0.3333s);
-				}
+			-webkit-animation: TypingAnimation 1s ease-in-out infinite;
+			animation: TypingAnimation 1s ease-in-out infinite;
+			&:nth-of-type(2) {
+				-webkit-animation-delay: 0.2s;
+				animation-delay: 0.2s;
+			}
+			&:nth-of-type(3) {
+				-webkit-animation-delay: 0.4s;
+				animation-delay: 0.4s;
 			}
 		}
 	}
-
-	@-webkit-keyframes blink {
+	@-webkit-keyframes TypingAnimation {
+	}
+	@keyframes TypingAnimation {
+		0% {
+			opacity: 0;
+		}
 		50% {
 			opacity: 1;
 		}
-	}
-
-	@keyframes blink {
-		50% {
-			opacity: 1;
-		}
-	}
-
-	@-webkit-keyframes bulge {
-		50% {
-			transform: scale(1.05);
-		}
-	}
-
-	@keyframes bulge {
-		50% {
-			transform: scale(1.05);
+		100% {
+			opacity: 0;
 		}
 	}
 }
